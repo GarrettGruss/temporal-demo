@@ -2,7 +2,7 @@
 
 This is a simple example showing how to call an LLM from Temporal using the OpenAI Python API library. Being an external API call, the LLM invocation happens in a Temporal Activity.
 
-## This recipe highlights two key design decisions:
+## This recipe highlights three key design decisions:
 
 - A generic Activity for invoking an LLM API. This Activity can be re-used with different arguments throughout your codebase.
 - Configuring the Temporal client with a dataconverter to allow serialization of Pydantic types.
