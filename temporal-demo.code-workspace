@@ -1,0 +1,6 @@
+{
+  "folders": [
+    { "path": "packages/hello-world" },
+    { "path": "packages/structured-outputs" }
+  ]
+}

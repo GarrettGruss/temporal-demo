@@ -1,0 +1,9 @@
+## Python
+*.egg-info
+*.venv
+__pycache__
+.ruff_cache
+dist
+
+## standard
+.env
