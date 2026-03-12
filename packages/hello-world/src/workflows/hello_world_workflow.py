@@ -11,6 +11,7 @@ max interval 100x initial, unlimited attempts, no non-retryable errors).
 """
 
 from temporalio import workflow
+from temporalio.common import RetryPolicy
 from datetime import timedelta
 from config import OPENAI_MODEL
 
@@ -29,6 +30,7 @@ class HelloWorld:
                 instructions=system_instructions,
                 input=input,
             ),
-            start_to_close_timeout=timedelta(seconds=30),
+            start_to_close_timeout=timedelta(seconds=90),
+            retry_policy=RetryPolicy(maximum_attempts=3),
         )
         return result.output_text
